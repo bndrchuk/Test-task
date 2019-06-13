@@ -6,7 +6,7 @@ function FindOnPage(name, status) {
 
 	input = document.getElementById(name).value; //получаем значение из поля в html
 	
-	if(input.length<3&&status==true) {
+	if(input.length<3) {
 		alert('Для поиска вы должны ввести три или более символов');
 		function FindOnPageBack() { document.body.innerHTML = locale_HTML; }   //обнуляем стили
 	}

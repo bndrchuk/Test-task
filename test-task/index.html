@@ -16,9 +16,10 @@
 				</header>
 			</div>
 			<div class="header-search">
-				<form action="#" name="search_pokemons">
+				<form action="#" method="post" name="search_pokemons">
 					<input type="search" placeholder="Search" id="text-to-find" autofocus>
-					<button type="submit" class="search-btn"title="Начать поиск">Search</button>
+					<button type="submit" onclick=«javascript: FindOnPage('text-to-find');» class="search-btn" 
+					title="Начать поиск">Search</button>
 				</form>
 			</div>
 		</div>

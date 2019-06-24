@@ -6,8 +6,9 @@
 	<title>Pokemon's Power</title>
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
 </head>
-<body>
+<body>	<script src="js/script.js"></script>
 	<div class="wrapper">
 		<div class="header">
 			<div class="header-logo">
@@ -23,6 +24,14 @@
 				</form>
 			</div>
 		</div>
+	<a href="javascript:endurContainer()">Hide Endurance</a>
+	<a href="javascript:shadowContainer()">Hide Shadow</a>
+	<a href="javascript:powerContainer()">Hide Power</a>
+	<a href="javascript:speedContainer()">Hide Speed</a>
+	<a href="javascript:showContainer()">Show All</a>
+	<a href="javascript:show1Container()">Показать 1</a>
+	<a href="javascript:show3Container()">Показать 3</a>
+	<a href="javascript:show5Container()">Показать 5</a>
 		<div class="table">
 			<div class="table-header">
 				<span>pokemons</span>		
@@ -72,16 +81,57 @@
 				<div class="pokemon-item">
 					<img src="https://pokemongolife.ru/p/Poliwhirl.png" alt="">
 					<h3>Pokemon poliwhirl</h3>
-					<span class="pok endur-pok">Speed</span>
-					<span class="pok endur-pok">Agility</span>
+					<span class="pok speed-pok">Speed</span>
+					<span class="pok agil-pok">Agility</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ipsum recusandae velit, ex adipisci, illo debitis dolore, excepturi explicabo enim aliquid asperiores quisquam. Earum assumenda doloremque suscipit, recusandae laborum dolorum.</p>
 					<button class="pokemon-btn">select pokemon</button>
 				</div>
 			</div>
+			<script>
+				var elems = document.getElementsByClassName("pokemon-item");
+				var endurToHideList = document.getElementsByClassName("endur-pok");
+				var shadowToHideList = document.getElementsByClassName("shadow-pok");
+				var powerToHideList = document.getElementsByClassName("power-pok");
+				var speedToHideList = document.getElementsByClassName("speed-pok");
+
+				function endurContainer() {
+						for (var i = endurToHideList.length; i--;)
+					    endurToHideList[i].parentNode.style.display = "none";	
+				}
+				function shadowContainer() {
+						for (var i = shadowToHideList.length; i--;)
+						shadowToHideList[i].parentNode.style.display = "none";	
+				}
+				function powerContainer() {
+						for (var i = powerToHideList.length; i--;)
+						powerToHideList[i].parentNode.style.display = "none";	
+				}
+				function speedContainer() {
+						for (var i = speedToHideList.length; i--;)
+						speedToHideList[i].parentNode.style.display = "none";	
+				}
+				function showContainer() {
+					for (var i=0;i<elems.length;i++)
+					elems[i].style.display = ""
+				}
+				function show1Container() {
+					for (var i = 1; i++;)
+						elems[i].style.display = "none";
+				}
+				function show3Container() {
+					for (var i = 2; i++;)
+						elems[i].style.display = "none";
+				}
+				function show5Container() {
+					for (var i = 4; i++;)
+						elems[i].style.display = "none";
+				}
+			</script>
+
 			<div class="paginator">
 		       		 <a href="#1" class="page-btn">1</a>
-		       		 <a href="#2" class="page-btn">2</a>
-		       	   	 <a href="#3" class="page-btn">3</a>
+		       		 <a href="#3" class="page-btn">2</a>
+		       	   	 <a href="#5" class="page-btn">3</a>
    			 </div> 
 		</div>
 	</div>
